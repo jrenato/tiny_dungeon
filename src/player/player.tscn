@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://ban3372fc8aeh"]
+
+[ext_resource type="Script" path="res://src/player/player.gd" id="1_de4dw"]
+[ext_resource type="Texture2D" uid="uid://d2owm3svt8r6v" path="res://assets/images/tilemap_packed.png" id="1_luwb4"]
+[ext_resource type="Texture2D" uid="uid://bad2ja24pu4f" path="res://assets/images/point_light.png" id="3_uqale"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hkrq"]
+radius = 5.0
+height = 12.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_de4dw")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+show_behind_parent = true
+shadow_enabled = true
+shadow_filter_smooth = 3.0
+texture = ExtResource("3_uqale")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.694118, 0.694118, 0.694118, 1)
+texture = ExtResource("1_luwb4")
+region_enabled = true
+region_rect = Rect2(16, 112, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_1hkrq")

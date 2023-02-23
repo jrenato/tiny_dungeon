@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://jk40fjojmqrr"]
+
+[ext_resource type="Texture2D" uid="uid://d2owm3svt8r6v" path="res://assets/images/tilemap_packed.png" id="1_pmmo8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqwd5"]
+size = Vector2(16, 14)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pu1eh"]
+cull_mode = 2
+polygon = PackedVector2Array(-8, -5, -7, -5, -7, -6, 7.00761, -6, 7, -5, 8, -5, 8, 8, -8, 8)
+
+[node name="Chest" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_fqwd5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pmmo8")
+region_enabled = true
+region_rect = Rect2(80, 112, 16, 16)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_pu1eh")
