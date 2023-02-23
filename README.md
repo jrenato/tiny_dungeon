@@ -16,4 +16,13 @@ Problem I'd like to solve:
 * Chest sprite has cull_mode counterclockwise (so it lights up)
 * Tilemap has no cull_mode option (that's why it's dark - it receives shadows)
 
+My goal is to get this:
+![Screenshot](assets/screenshots/04.png "Sprites lit and shadows around")
+
+What I get is this:
+![Screenshot](assets/screenshots/02.png "Sprites lit and shadows around")
+
+Or this:
+![Screenshot](assets/screenshots/03.png "Sprites lit and shadows around")
+
 Art: Tiny Dungeon by [Kenney](https://www.kenney.nl/assets/tiny-dungeon)
