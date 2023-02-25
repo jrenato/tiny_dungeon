@@ -1,9 +1,7 @@
 # Tiny Dungeon
-A Godot 4 top-down mini RPG
+A Godot 4 simple lighting test.
 
-Built just to test some lighting features in Godot 4.
-
-I might expand it in the future.
+I might build an actual game in the future.
 
 ![Screenshot](assets/screenshots/01.png "Main Scene")
 * Basic occluders in chest sprite and tileset
